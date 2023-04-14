@@ -82,17 +82,28 @@ puts square(10)
 # check_stock(1, "Salsa");
 # # => "Salsa - running LOW"
 
+# def check_stock(quantity, item)
+#     if quantity > 0
+#       if quantity >= 4
+#         puts "#{item} is stocked"
+#       else
+#         puts "#{item} - running LOW"
+#       end
+#     else
+#       puts "#{item} - OUT of stock!"
+#     end
+#   end
+
+
 def check_stock(quantity, item)
-    if quantity > 0
-      if quantity >= 4
+    if quantity >= 4
         puts "#{item} is stocked"
-      else
+    elsif quantity > 0
         puts "#{item} - running LOW"
-      end
     else
-      puts "#{item} - OUT of stock!"
+        puts "#{item} - OUT of stock!"
     end
-  end
+end
 
 puts check_stock(4, "Coffee")
 puts check_stock(3, "Tortillas")
