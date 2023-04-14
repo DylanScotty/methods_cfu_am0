@@ -37,8 +37,7 @@ puts custom_greeting("Dylan")
 # 3: Write a method named greet_person that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
 
 def greet_person(first_name, middle_name, last_name)
-    full_name = [first_name, middle_name, last_name].compact.join(' ')
-    "Hello, #{full_name}! Hope you have a great day"
+    "Hello, #{first_name} #{middle_name} #{last_name}! Hope you have a great day"
   end
 
 puts greet_person("Dylan", "Scott", "Timmons")
@@ -85,15 +84,15 @@ puts square(10)
 
 def check_stock(quantity, item)
     if quantity > 0
-        if quantity >= 4
-            "#{item} is stocked"
-        else
-            "#{item} - running LOW"
-        end
+      if quantity >= 4
+        puts "#{item} is stocked"
+      else
+        puts "#{item} - running LOW"
+      end
     else
-        "#{item} - OUT of stock!"
+      puts "#{item} - OUT of stock!"
     end
-end
+  end
 
 puts check_stock(4, "Coffee")
 puts check_stock(3, "Tortillas")
